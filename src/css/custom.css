@@ -1,30 +1,97 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url('https://rsms.me/inter/inter.css');
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1666ba;
+  --ifm-color-primary-dark: #145da9;
+  --ifm-color-primary-darker: #13589f;
+  --ifm-color-primary-darkest: #102445;
+  --ifm-color-primary-light: #2c75cb;
+  --ifm-color-primary-lighter: #4f8fd7;
+  --ifm-color-primary-lightest: #dceafb;
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: Inter, system-ui, -apple-system, 'Segoe UI', Roboto,
+    Ubuntu, Cantarell, 'Noto Sans', sans-serif, BlinkMacSystemFont,
+    'Helvetica Neue', Arial, sans-serif;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-link-color: #1c1e21;
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-font-color-base: #1c1e21;
+  --ifm-font-color-secondary: #525860;
+  --ifm-heading-color: #1c1e21;
+  --ifm-footer-background-color: #f5f6f7;
+  --ifm-footer-color: #444950;
+  --ifm-footer-link-color: #606770;
+  --ifm-footer-title-color: #1c1e21;
+  --ifm-code-background: #f6f7f8;
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #7ab3ef;
+  --ifm-color-primary-dark: #5ea2ec;
+  --ifm-color-primary-darker: #4c97ea;
+  --ifm-color-primary-darkest: #1666ba;
+  --ifm-color-primary-light: #96c4f2;
+  --ifm-color-primary-lighter: #b0d3f5;
+  --ifm-color-primary-lightest: #d9ebfb;
+  --ifm-background-color: #0d1726;
+  --ifm-background-surface-color: #111c2d;
+  --ifm-navbar-background-color: #111c2d;
+  --ifm-font-color-base: #e6edf7;
+  --ifm-font-color-secondary: #b7c4d6;
+  --ifm-heading-color: #f5f8fc;
+  --ifm-navbar-link-color: #e6edf7;
+  --ifm-footer-background-color: #08111d;
+  --ifm-footer-color: #d6e3f5;
+  --ifm-footer-link-color: #d6e3f5;
+  --ifm-footer-title-color: #ffffff;
+  --ifm-code-background: #162236;
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--ifm-background-color);
+}
+
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--ifm-navbar-shadow);
+}
+
+.navbar__logo img {
+  height: 2rem;
+}
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.menu__link--active,
+.navbar__link--active {
+  font-weight: 600;
+}
+
+.button.button--secondary {
+  background: #ebf2fc;
+  border-color: #d9e7f8;
+  color: #102445;
+}
+
+[data-theme='dark'] .button.button--secondary {
+  background: #1a2a42;
+  border-color: #2a4264;
+  color: #f5f8fc;
 }

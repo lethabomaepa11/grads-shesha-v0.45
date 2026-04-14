@@ -1,11 +1,77 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0 5rem;
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.sectionHeading {
+  margin-bottom: 1.5rem;
+  max-width: 48rem;
+}
+
+.sectionHeading h2 {
+  margin-bottom: 0.4rem;
+}
+
+.sectionHeading p {
+  color: #526176;
+  margin: 0;
+}
+
+.featureCol {
+  display: flex;
+}
+
+.featureCard {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(242, 248, 255, 0.95));
+  border: 1px solid rgba(22, 102, 186, 0.14);
+  border-radius: 24px;
+  box-shadow: 0 16px 35px rgba(16, 36, 69, 0.08);
+  min-height: 100%;
+  padding: 1.4rem;
+  width: 100%;
+}
+
+.featureCard h3 {
+  color: #102445;
+  margin-bottom: 0.7rem;
+}
+
+.featureCard p {
+  color: #526176;
+  margin-bottom: 0;
+}
+
+.featureLabel {
+  color: var(--ifm-color-primary);
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+[data-theme='dark'] .sectionHeading p {
+  color: #b7c4d6;
+}
+
+[data-theme='dark'] .featureCard {
+  background: linear-gradient(180deg, rgba(17, 28, 45, 0.98), rgba(22, 34, 54, 0.98));
+  border-color: rgba(122, 179, 239, 0.16);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+}
+
+[data-theme='dark'] .featureCard h3 {
+  color: #f5f8fc;
+}
+
+[data-theme='dark'] .featureCard p {
+  color: #b7c4d6;
+}
+
+@media screen and (max-width: 996px) {
+  .features {
+    padding-top: 3rem;
+  }
 }
