@@ -106,7 +106,7 @@ const config: Config = {
               to: '/docs/intro',
             },
           ],
-        },
+        }, 
         {
           title: 'Community',
           items: [
