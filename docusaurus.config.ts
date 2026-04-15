@@ -1,6 +1,15 @@
 import {themes as prismThemes} from 'prism-react-renderer';
+import {existsSync} from 'node:fs';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+const loadEnvFile = (process as NodeJS.Process & {
+  loadEnvFile?: (path?: string) => void;
+}).loadEnvFile;
+
+if (loadEnvFile && existsSync('.env')) {
+  loadEnvFile('.env');
+}
 
 const config: Config = {
   title: 'Shesha',
@@ -16,6 +25,10 @@ const config: Config = {
 
   organizationName: 'lethabomaepa11',
   projectName: 'grads-shesha-v0.45',
+  customFields: {
+    aiApiUrl: process.env.AI_API_URL ?? 'https://nwu-vaal-gkss.netlify.app/api/ai',
+    aiModel: process.env.AI_MODEL ?? 'llama-3.3-70b-versatile',
+  },
 
   onBrokenLinks: 'throw',
 
@@ -59,39 +72,11 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Shesha',
       logo: {
         alt: 'Shesha Logo',
         src: 'img/SheshaLogo.png',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Get Started',
-        },
-        {
-          to: '/docs/shesha-basics/adding-header',
-          label: 'Front-End Basics',
-          position: 'left',
-        },
-        {
-          to: '/docs/shesha-issues/subform',
-          label: 'Issues',
-          position: 'left',
-        },
-        {
-          href: 'https://www.shesha.io',
-          label: 'Try Shesha',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/shesha-io',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+      items: [],
     },
     footer: {
       links: [

@@ -1,0 +1,32 @@
+.navbarInner {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  min-height: 4.25rem;
+  width: 100%;
+}
+
+.brand {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.brandLogo {
+  display: block;
+  height: 2rem;
+  width: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .navbarInner {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+}
