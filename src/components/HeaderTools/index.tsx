@@ -26,6 +26,17 @@ type CustomFields = {
   aiModel?: string;
 };
 
+function extractJsonString(responseText: string) {
+  const trimmed = responseText.trim();
+
+  const fencedMatch = trimmed.match(/^```(?:json)?\s*([\s\S]*?)\s*```$/i);
+  if (fencedMatch?.[1]) {
+    return fencedMatch[1].trim();
+  }
+
+  return trimmed;
+}
+
 function buildAiPrompt(question: string, chatHistory: ChatMessage[]) {
   const recentHistory = chatHistory.slice(-6);
   const transcript = recentHistory
@@ -150,7 +161,7 @@ export default function HeaderTools() {
         throw new Error('The AI endpoint returned an unexpected response format.');
       }
 
-      const parsed = JSON.parse(payload.response) as AiAssistantResponse;
+      const parsed = JSON.parse(extractJsonString(payload.response)) as AiAssistantResponse;
       const assistantText = [
         parsed.answer,
         parsed.suggestedRoute
