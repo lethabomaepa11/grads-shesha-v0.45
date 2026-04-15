@@ -54,7 +54,7 @@ function buildAiPrompt(question: string, chatHistory: ChatMessage[]) {
     `Question: ${question}`,
     '',
     'Knowledge context:',
-    buildKnowledgeContext(),
+    buildKnowledgeContext(question),
   ]
     .filter(Boolean)
     .join('\n');
