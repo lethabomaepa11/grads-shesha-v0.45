@@ -26,7 +26,7 @@ const config: Config = {
   organizationName: 'lethabomaepa11',
   projectName: 'grads-shesha-v0.45',
   customFields: {
-    aiApiUrl: process.env.AI_API_URL ?? 'https://nwu-vaal-gkss.netlify.app/api/ai',
+    aiApiUrl: process.env.AI_API_URL ?? '/api/ai',
     aiModel: process.env.AI_MODEL ?? 'llama-3.3-70b-versatile',
   },
 
