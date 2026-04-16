@@ -33,7 +33,8 @@ contexts.appContext.selectedOrg = data.organisationId;
 
 This can be called from any script in the application — an `onChange` handler, a button's `onClick`, or an `onDataLoaded` event.
 
-![Setting app context in a script]()
+<img width="629" height="86" alt="image" src="https://github.com/user-attachments/assets/fbc75336-110e-40b3-a6a2-7b6a3b07d0eb" />
+
 
 ---
 
@@ -53,7 +54,8 @@ const org = contexts.appContext.selectedOrg;
 
 You can use this in any script across any page or component in your application.
 
-![Reading app context in a script]()
+<img width="1129" height="239" alt="image" src="https://github.com/user-attachments/assets/793dbbc3-2f4d-42ec-8f83-6f5f3ae076aa" />
+
 
 ---
 
@@ -61,27 +63,30 @@ You can use this in any script across any page or component in your application.
 
 App Context values can also be bound directly to component properties — no scripting required. This is particularly useful for driving visibility rules, default values, or labels from a global state.
 
-### 3. Click the Property Field
+### 1. Click the Property Field
 
 Click on the component property you want to bind to App Context.
 
-![Click the property]()
+<img width="1803" height="602" alt="image" src="https://github.com/user-attachments/assets/93367242-c483-4e07-b5a6-5d2907f649d5" />
+
 
 ---
 
-### 4. Navigate to the Common Tab
+### 2. Navigate to the Common Tab
 
 If you are not already on it, switch to the **Common** tab in the property panel.
 
-![Go to Common tab]()
+<img width="342" height="60" alt="image" src="https://github.com/user-attachments/assets/5e07fc86-d60f-460a-bf55-9a1b27424876" />
+
 
 ---
 
-### 5. Enable Show Binding
+### 3. Enable Show Binding
 
 Click **Show Binding** to reveal the context binding options.
 
-![Click Show Binding]()
+<img width="325" height="110" alt="image" src="https://github.com/user-attachments/assets/beb06e2c-e361-44f2-98f8-4cb0a9a3bebb" />
+
 
 ---
 
@@ -89,7 +94,8 @@ Click **Show Binding** to reveal the context binding options.
 
 From the context source dropdown, choose **App Context**.
 
-![Choose App Context]()
+<img width="339" height="284" alt="image" src="https://github.com/user-attachments/assets/6d9ea9f5-685e-4856-8879-f75ec0209471" />
+
 
 ---
 
@@ -100,7 +106,8 @@ From the context source dropdown, choose **App Context**.
 - **Component Name** → the name of your App Context key (e.g. `selectedOrg`)
 - **Property Name** → the same App Context key (e.g. `selectedOrg`)
 
-![Set Component Name and Property Name]()
+<img width="352" height="232" alt="image" src="https://github.com/user-attachments/assets/9581ff24-384c-42b2-91ee-be804a980fa4" />
+
 
 ---
 
