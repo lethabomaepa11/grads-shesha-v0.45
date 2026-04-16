@@ -1,6 +1,3 @@
-Here's the markdown doc:
-
-```markdown
 # Using App Context in Shesha
 
 App Context is one of the most powerful ways to maintain shared state throughout your entire Shesha application. Unlike local or page-level context, App Context persists across pages and components — making it ideal for values that need to be accessible anywhere in the app at any time.
@@ -113,4 +110,3 @@ From the context source dropdown, choose **App Context**.
 - For inter-page data passing, **Page Context is advised** over App Context unless the value is genuinely global
 - Always set **both** the Component Name and Property Name when binding via the Common tab — this is a common source of binding issues
 - App Context values are **not persisted** across sessions; they reset when the application is refreshed
-```
