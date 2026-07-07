@@ -44,6 +44,27 @@ export const generatedKnowledgeDocs: KnowledgeDoc[] = [
     "content": "Add a Header Form This guide shows how to expose an existing header form in Shesha and make it visible in the frontend layout. Before you begin Make sure you have the following: Access to Configuration Studio A target module where the header form should be exposed Access to the frontend codebase, especially the adminportal project Expose the Header Form in Configuration Studio Follow these steps to make the existing header form available in your module. Open your module In Configuration Studio, locate the module where you want to use the header form. Right-click the module Open the available module actions Select Expose Existing Choose Expose Existing from the module options. This allows you to reuse an existing form instead of creating a new one from scratch. Choose the header form In the selection dialog: Locate the header form from the Shesha module Select it Click OK Confirm the form is available After exposing the form: Search for the header form in your forms list Open it Apply any changes required for your project Make the Header Visible in the Frontend After exposing the form, update the frontend layout so the header is rendered in the application. Open the layout file In the adminportal project, open: Update MainLayout Edit the MainLayout configuration so that it uses your exposed header form. Set the correct module name The module value must match the module where you exposed the header form. If the module name is incorrect, the frontend will not load the expected form. Result Once the layout is updated, you should be able to view the header in the frontend. Notes Use Expose Existing when you want to reuse a form provided by another module Confirm that the module value in the frontend matches the module used in Configuration Studio If the header does not appear, recheck both the exposed form and the frontend layout configuration"
   },
   {
+    "title": "Using App Context in Shesha",
+    "route": "/docs/shesha-basics/appContext",
+    "category": "Shesha Basics",
+    "tags": [
+      "shesha",
+      "basics",
+      "appcontext",
+      "using",
+      "context",
+      "most",
+      "powerful",
+      "ways",
+      "maintain",
+      "shared",
+      "state",
+      "throughout"
+    ],
+    "summary": "Using App Context in Shesha App Context is one of the most powerful ways to maintain shared state throughout your entire Shesha application.",
+    "content": "Using App Context in Shesha App Context is one of the most powerful ways to maintain shared state throughout your entire Shesha application. Unlike local or page-level context, App Context persists across pages and components — making it ideal for values that need to be accessible anywhere in the app at any time. When to Use App Context App Context is best suited for situations where a value needs to be available globally, without being tied to a specific page or component. Common use cases include: Referencing a single value across the entire app — such as a currently selected organisation, user role, or global filter that multiple pages depend on Passing data between pages without cluttering the URL — though for most inter-page navigation cases, Page Context is recommended instead, as it keeps concerns better separated Tip: If you find yourself only needing context between two pages, consider using Page Context first. App Context shines when the value is truly application-wide. Setting Up App Context Set a Value in App Context In any Script property, you can write a value to App Context using the following pattern: Example: This can be called from any script in the application — an onChange handler, a button's onClick, or an onDataLoaded event. Read a Value from App Context Reading the value back is just as simple — reference it the same way it was set: Example: You can use this in any script across any page or component in your application. Using App Context in Component Properties App Context values can also be bound directly to component properties — no scripting required. This is particularly useful for driving visibility rules, default values, or labels from a global state. Click the Property Field Click on the component property you want to bind to App Context. Navigate to the Common Tab If you are not already on it, switch to the Common tab in the property panel. Enable Show Binding Click Show Binding to reveal the context binding options. Select App Context as the Source From the context source dropdown, choose App Context. Set the Component Name and Property Name Important: You must set both the Component Name and the Property Name to the context key you are binding to. Leaving either blank will cause the binding to not resolve correctly. Component Name → the name of your App Context key (e.g. selectedOrg) Property Name → the same App Context key (e.g. selectedOrg) Notes App Context is application-wide — values set on one page are immediately accessible on any other For inter-page data passing, Page Context is advised over App Context unless the value is genuinely global Always set both the Component Name and Property Name when binding via the Common tab — this is a common source of binding issues App Context values are not persisted across sessions; they reset when the application is refreshed"
+  },
+  {
     "title": "Using the Calendar Component in Shesha",
     "route": "/docs/shesha-basics/calendar",
     "category": "Shesha Basics",

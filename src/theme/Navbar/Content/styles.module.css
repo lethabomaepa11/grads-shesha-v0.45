@@ -18,6 +18,18 @@
   width: auto;
 }
 
+.githubLink {
+  align-items: center;
+  color: var(--ifm-navbar-link-color);
+  display: inline-flex;
+  margin-left: auto;
+  transition: color 0.2s;
+}
+
+.githubLink:hover {
+  color: var(--ifm-color-primary);
+}
+
 @media screen and (max-width: 996px) {
   .navbarInner {
     align-items: stretch;
